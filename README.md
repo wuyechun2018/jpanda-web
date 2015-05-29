@@ -1,0 +1,1 @@
+1¡¢A standard Maven web Project  in Eclipse!
