@@ -19,16 +19,16 @@
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right">
                             <li class="dropdown">
-                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i> Vincent Gabriel <i class="caret"></i>
+                                <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i> Admin <i class="caret"></i>
 
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a tabindex="-1" href="#">Profile</a>
+                                        <a tabindex="-1" href="#">我的账户</a>
                                     </li>
                                     <li class="divider"></li>
                                     <li>
-                                        <a tabindex="-1" href="login.html">Logout</a>
+                                        <a tabindex="-1" href="${ctx}/logout">退出</a>
                                     </li>
                                 </ul>
                             </li>
@@ -123,7 +123,7 @@
                 <div class="span3" id="sidebar">
                     <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
                         <li class="active">
-                            <a href="index.html"><i class="icon-chevron-right"></i>主页面</a>
+                            <a href="${ctx}/views/system/main"><i class="icon-chevron-right"></i>主页面</a>
                         </li>
                         <li>
                             <a href="calendar.html"><i class="icon-chevron-right"></i>用户</a>
@@ -135,13 +135,13 @@
                             <a href="form.html"><i class="icon-chevron-right"></i> 权限</a>
                         </li>
                         <li>
-                            <a href="tables.html"><i class="icon-chevron-right"></i> 图表</a>
+                            <a href="${ctx}/views/system/report"><i class="icon-chevron-right"></i> 图表</a>
                         </li>
                          <li>
-                            <a href="#"><span class="badge badge-info pull-right">11</span> 报表</a>
+                            <a href="${ctx}/views/system/report"><span class="badge badge-info pull-right">11</span> 报表</a>
                         </li>
                          <li>
-                            <a href="#"><span class="badge badge-warning pull-right">4,231</span> Logs</a>
+                            <a href="#"><span class="badge badge-warning pull-right">4,231</span> 日志</a>
                         </li>
                     </ul>
                 </div>
@@ -174,7 +174,7 @@
                         <div class="block">
                             <div class="navbar navbar-inner block-header">
                                 <div class="muted pull-left">Statistics</div>
-                                <div class="pull-right"><span class="badge badge-warning">View More</span>
+                                <div class="pull-right"><span class="badge badge-warning">查看更多</span>
 
                                 </div>
                             </div>

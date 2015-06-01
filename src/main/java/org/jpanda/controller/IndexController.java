@@ -1,6 +1,7 @@
 package org.jpanda.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -34,7 +35,7 @@ public class IndexController {
 		
 		if(username!=null&&password!=null){
 			if("admin".equals(username)&&"123".equals(password)){
-				return "main";
+				return "/system/main";
 			}
 			
 		}else{
@@ -43,5 +44,34 @@ public class IndexController {
 		return "index";
 	}
 	
+	
+	/**
+	 * 
+	 * 功能 :系统用户登录
+	
+	 * 开发：wuyechun 2015-6-1
+	
+	 * @return
+	 */
+	@RequestMapping("/logout")
+	public String logout(){
+		return "logout";
+	}
+	
+	
+	/**
+	 * 
+	 * 功能 :系统跳转页面公用方法
+	
+	 * 开发：wuyechun 2013-9-3
+	
+	 * @param module
+	 * @param page
+	 * @return
+	 */
+	@RequestMapping(value = "views/{module}/{page}")
+	public String getDefinedPage(@PathVariable("module") String module,@PathVariable("page") String page) {
+		return module+"/"+page;
+	}
 
 }

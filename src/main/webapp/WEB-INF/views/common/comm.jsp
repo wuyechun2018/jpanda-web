@@ -15,6 +15,11 @@
 <link href="${ctx}/resources/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
 
 <link href="${ctx}/resources/assets/styles.css" rel="stylesheet" media="screen">
+<link href="${ctx}/resources/assets/DT_bootstrap.css" rel="stylesheet" media="screen">
+
+
+<link href="resources/jqGrid/4.4.3/css/ui.jqgrid.css" rel="stylesheet" type="text/css" media="screen"  /> 
+
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
 <script src="${ctx}/resources/jquery/html5.js"></script>
@@ -25,6 +30,11 @@
 <body>
 <script src="${ctx}/resources/bootstrap/2.3.2/js/bootstrap.min.js"></script>
 <script src="${ctx}/resources/easypiechart/jquery.easy-pie-chart.js"></script>
- <script src="${ctx}/resources/assets/scripts.js"></script>
+<script src="${ctx}/resources/datatables/js/jquery.dataTables.min.js"></script>
+<script src="${ctx}/resources/assets/scripts.js"></script>
+<script src="${ctx}/resources/assets/DT_bootstrap.js"></script>
+
+
+
 </body>
 </html>
