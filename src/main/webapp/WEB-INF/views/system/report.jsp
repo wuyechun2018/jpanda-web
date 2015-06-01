@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <%--放置的位置要特别注意,不能放在第三行,否则会有一些样式问题 --%>
 <%@ include file="/WEB-INF/views/common/comm.jsp" %>
+<link href="${ctx}/resources/assets/DT_bootstrap.css" rel="stylesheet" media="screen">
 <title>Jpanda</title>
 </head>
 <body>
@@ -126,22 +127,22 @@
                             <a href="${ctx}/views/system/main"><i class="icon-chevron-right"></i>主页面</a>
                         </li>
                         <li>
-                            <a href="calendar.html"><i class="icon-chevron-right"></i>用户</a>
+                            <a href="${ctx}/views/system/user"><i class="icon-chevron-right"></i>用户</a>
                         </li>
                         <li>
-                            <a href="stats.html"><i class="icon-chevron-right"></i>角色</a>
+                            <a href="${ctx}/views/system/user"><i class="icon-chevron-right"></i>角色</a>
                         </li>
                         <li>
-                            <a href="form.html"><i class="icon-chevron-right"></i> 权限</a>
+                            <a href="${ctx}/views/system/user"><i class="icon-chevron-right"></i> 权限</a>
                         </li>
                         <li>
-                            <a href="tables.html"><i class="icon-chevron-right"></i> 图表</a>
+                            <a href="${ctx}/views/system/report"><i class="icon-chevron-right"></i> 图表</a>
                         </li>
                          <li class="active">
-                            <a href="#"><span class="badge badge-info pull-right">11</span> 报表</a>
+                            <a href="${ctx}/views/system/report"><span class="badge badge-info pull-right">11</span> 报表</a>
                         </li>
                          <li>
-                            <a href="#"><span class="badge badge-warning pull-right">4,231</span> 日志</a>
+                            <a href="${ctx}/views/system/log"><span class="badge badge-warning pull-right">4,231</span> 日志</a>
                         </li>
                     </ul>
                 </div>
@@ -514,15 +515,7 @@
             <footer>
                 <p>&copy; Vincent Gabriel 2013</p>
             </footer>
-        </div>
         
-        
-        <script type="text/javascript">
-        $(function() {
-            // Easy pie charts
-            $('.chart').easyPieChart({animate: 1000});
-        });
-        </script>
-        
+        <script src="${ctx}/resources/assets/DT_bootstrap.js"></script>
 </body>
 </html>

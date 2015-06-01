@@ -126,13 +126,13 @@
                             <a href="${ctx}/views/system/main"><i class="icon-chevron-right"></i>主页面</a>
                         </li>
                         <li>
-                            <a href="calendar.html"><i class="icon-chevron-right"></i>用户</a>
+                            <a href="${ctx}/views/system/user"><i class="icon-chevron-right"></i>用户</a>
                         </li>
                         <li>
-                            <a href="stats.html"><i class="icon-chevron-right"></i>角色</a>
+                            <a href="${ctx}/views/system/user"><i class="icon-chevron-right"></i>角色</a>
                         </li>
                         <li>
-                            <a href="form.html"><i class="icon-chevron-right"></i> 权限</a>
+                            <a href="${ctx}/views/system/user"><i class="icon-chevron-right"></i> 权限</a>
                         </li>
                         <li>
                             <a href="${ctx}/views/system/report"><i class="icon-chevron-right"></i> 图表</a>
@@ -141,7 +141,7 @@
                             <a href="${ctx}/views/system/report"><span class="badge badge-info pull-right">11</span> 报表</a>
                         </li>
                          <li>
-                            <a href="#"><span class="badge badge-warning pull-right">4,231</span> 日志</a>
+                            <a href="${ctx}/views/system/log"><span class="badge badge-warning pull-right">4,231</span> 日志</a>
                         </li>
                     </ul>
                 </div>
