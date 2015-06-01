@@ -1,28 +1,35 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
 <html>
 <head>
-<%-- 注意此处路径的写法 --%>
-<script type="text/javascript" src="${ctx}/resources/jquery/jquery-1.9.1.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<%--放置的位置要特别注意,不能放在第三行,否则会有一些样式问题 --%>
+<%@ include file="/WEB-INF/views/common/comm.jsp" %>
 
 <script type="text/javascript">
 
 $(function(){
-	alert('Now,we can use Jquery!');
-})
+	//alert('Now,we can use Jquery!');
+});
 
 
 </script>
 
 <title>Welcome</title>
 </head>
-<body>
-<h2>Hello,Jpanda!</h2>
-
+<body id="login">
+  <%--
+ <h2>Hello,Jpanda!</h2>
+  --%>
+ <div class="container">
+      <form class="form-signin" action="${ctx}/login" method="post">
+        <h2 class="form-signin-heading">请登录</h2>
+        <input type="text"  name="username" class="input-block-level" placeholder="用户名或邮箱">
+        <input type="password" name="password"  class="input-block-level" placeholder="密码">
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me">记住我
+        </label>
+        <button class="btn btn-large btn-primary" type="submit">登录</button>
+      </form>
+ </div> 
 </body>
 </html>
