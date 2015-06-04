@@ -31,17 +31,15 @@ var data = [
 
  $(function(){ 
    $("#list").jqGrid({
-     datatype: "local",
- 	 data:data,
- 	 colNames:['Inv No','Date', 'Client', 'Amount','Tax','Total','Notes'],
-     colModel :[ 
-	{name:'id',index:'id', width:60, sorttype:"int"},
-	{name:'invdate',index:'invdate', width:90, sorttype:"date"},
-	{name:'name',index:'name', width:100},
-	{name:'amount',index:'amount', width:80, align:"right",sorttype:"float"},
-	{name:'tax',index:'tax', width:80, align:"right",sorttype:"float"},		
-	{name:'total',index:'total', width:80,align:"right",sorttype:"float"},		
-	{name:'note',index:'note', width:150, sortable:false}	 
+     //datatype: "local",
+ 	 //data:data,
+	url: ctx+'/sysLoginUser/list',
+    datatype: "json",
+	colNames:['主键','用户名','密码'],
+    colModel :[ 
+	{name:'userId',index:'userId', width:60, sorttype:"int"},
+	{name:'userName',index:'userName', width:90, sorttype:"date"},
+	{name:'loginPwd',index:'loginPwd', width:150, sortable:false}	 
      ],
      pager: "#pager",
      rowNum:10, 
@@ -51,7 +49,7 @@ var data = [
      sortorder: "desc", 
      viewrecords: true, 
      gridview: true,
-     caption: "native grid",
+     caption: "用户列表",
      width:docWidth-400, 
      height:docHeight-200
    }); 

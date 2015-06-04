@@ -17,6 +17,10 @@ public class JdbcSupportDao {
 	}
 	 
 	 
+	public Long getCount(String sql){
+		
+		return Long.valueOf(jdbcTemplate.queryForObject(sql, Integer.class));
+	}
 	
 	
 

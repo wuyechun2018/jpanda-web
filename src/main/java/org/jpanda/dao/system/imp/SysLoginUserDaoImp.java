@@ -7,13 +7,16 @@ import java.util.List;
 import org.jpanda.dao.system.JdbcSupportDao;
 import org.jpanda.dao.system.LoginUserDao;
 import org.jpanda.model.SysLoginUser;
+import org.jpanda.util.OracleSqlHelper;
+import org.jpanda.util.PageObject;
+import org.jpanda.util.Pager;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
 @Component
 public class SysLoginUserDaoImp  extends JdbcSupportDao  implements LoginUserDao {
 	
-	 public List<SysLoginUser> list(){
+	 public PageObject list(Pager page){
 		 
 		 String sql="SELECT t.user_id,\n" +
 						 "       t.user_name,\n" + 
@@ -28,10 +31,10 @@ public class SysLoginUserDaoImp  extends JdbcSupportDao  implements LoginUserDao
 						 "       t.user_theme,\n" + 
 						 "       t.memo\n" + 
 						 "  FROM SYS_LOGIN_USER t";
-
+		 
 		 
 		 List<SysLoginUser> userList = getJdbcTemplate().query(
-			        sql,
+			        OracleSqlHelper.getPagerSql(sql,page),
 			        new RowMapper<SysLoginUser>() {
 			            public SysLoginUser mapRow(ResultSet rs, int rowNum) throws SQLException {
 			            	SysLoginUser loginUser = new SysLoginUser();
@@ -42,14 +45,18 @@ public class SysLoginUserDaoImp  extends JdbcSupportDao  implements LoginUserDao
 			            	loginUser.setLoginAccount(rs.getString(5));
 			            	loginUser.setLoginPwd(rs.getString(6));
 			            	loginUser.setUserEmail(rs.getString(7));
-			            	//loginUser.setUserState(userState);
-			            	//loginUser.setUserType(userType);
-			            	//loginUser.setUserTheme(userTheme);
-			            	//loginUser.setMemo(memo);
+			            	loginUser.setUserState(rs.getString(8));
+			            	loginUser.setUserType(rs.getString(9));
+			            	loginUser.setUserTheme(rs.getString(10));
+			            	loginUser.setMemo(rs.getString(11));
 			                return loginUser;
 			            }
 			        });
-		 return userList;
+		 PageObject pageObj=new PageObject();
+		 pageObj.setList(userList);
+		 pageObj.setTotalCount(getCount(OracleSqlHelper.getCountSql(sql)));
+		 
+		 return pageObj;
 	 }
 	 
 	 
@@ -59,8 +66,6 @@ public class SysLoginUserDaoImp  extends JdbcSupportDao  implements LoginUserDao
 		public SysLoginUser mapRow(ResultSet rs, int rowNum)
 				throws SQLException {
 			SysLoginUser loginUser = new SysLoginUser();
-			
-			
             return loginUser;
 		}
 	 }
