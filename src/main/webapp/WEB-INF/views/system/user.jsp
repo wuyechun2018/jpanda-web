@@ -6,7 +6,7 @@
 <%@ include file="/WEB-INF/views/common/comm.jsp" %>
 <link href="${ctx}/resources/jqGrid/4.8.2/css/ui.jqgrid.css" rel="stylesheet" type="text/css" media="screen"  /> 
 <link href="${ctx}/resources/jqGrid/4.8.2/css/ui.jqgrid-bootstarp.css" rel="stylesheet" type="text/css" media="screen"  /> 
-<link href="${ctx}/resources/jquery-ui/1.11.4/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen"  /> 
+<link href="${ctx}/resources/jquery-ui/1.11.4-redmond/jquery-ui.min.css" rel="stylesheet" type="text/css" media="screen"  /> 
 <title>Jpanda</title>
 <script src="${ctx}/resources/jqGrid/4.8.2/js/i18n/grid.locale-cn.js" type="text/javascript"></script>  
 <script src="${ctx}/resources/jqGrid/4.8.2/js/jquery.jqGrid.min.js" type="text/javascript"></script>  
@@ -53,7 +53,7 @@ var data = [
      gridview: true,
      caption: "native grid",
      width:docWidth-400, 
-     height:250
+     height:docHeight-200
    }); 
  }); 
 </script>

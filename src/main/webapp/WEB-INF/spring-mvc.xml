@@ -8,9 +8,22 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 	
 	<!--注解驱动特性-->
-	<mvc:annotation-driven/>
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+				<property name="supportedMediaTypes">
+					<list>
+						<value>text/plain;charset=UTF-8</value>
+						<value>text/html;charset=UTF-8</value>
+					</list>
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
 	
-	<context:component-scan base-package="org.jpanda.controller"/>
+	
+	
+	<context:component-scan base-package="org.jpanda"/>
 
 	<!-- 将静态文件指定到某个特殊的文件夹中统一处理 -->
 	<mvc:resources  mapping="/resources/**" location="/resources/" />
