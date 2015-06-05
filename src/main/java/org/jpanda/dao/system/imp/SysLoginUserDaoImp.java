@@ -5,19 +5,27 @@ import java.sql.SQLException;
 import java.util.List;
 
 import org.jpanda.dao.system.JdbcSupportDao;
-import org.jpanda.dao.system.LoginUserDao;
+import org.jpanda.dao.system.SysLoginUserDao;
 import org.jpanda.model.SysLoginUser;
 import org.jpanda.util.OracleSqlHelper;
-import org.jpanda.util.PageObject;
+import org.jpanda.util.ResultData;
 import org.jpanda.util.Pager;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 
 @Component
-public class SysLoginUserDaoImp  extends JdbcSupportDao  implements LoginUserDao {
+public class SysLoginUserDaoImp  extends JdbcSupportDao  implements SysLoginUserDao {
 	
-	 public PageObject list(Pager page){
-		 
+	/***
+	 * 
+	 * 功能 :用户列表
+	
+	 * 开发：wuyechun 2015-6-5
+	
+	 * @param page
+	 * @return
+	 */
+	 public ResultData list(Pager page){
 		 String sql="SELECT t.user_id,\n" +
 						 "       t.user_name,\n" + 
 						 "       t.user_alias,\n" + 
@@ -52,11 +60,11 @@ public class SysLoginUserDaoImp  extends JdbcSupportDao  implements LoginUserDao
 			                return loginUser;
 			            }
 			        });
-		 PageObject pageObj=new PageObject();
-		 pageObj.setList(userList);
-		 pageObj.setTotalCount(getCount(OracleSqlHelper.getCountSql(sql)));
+		 ResultData resultData=new ResultData();
+		 resultData.setList(userList);
+		 resultData.setTotalCount(getCount(OracleSqlHelper.getCountSql(sql)));
 		 
-		 return pageObj;
+		 return resultData;
 	 }
 	 
 	 
@@ -66,6 +74,17 @@ public class SysLoginUserDaoImp  extends JdbcSupportDao  implements LoginUserDao
 		public SysLoginUser mapRow(ResultSet rs, int rowNum)
 				throws SQLException {
 			SysLoginUser loginUser = new SysLoginUser();
+        	loginUser.setUserId(rs.getLong(1));
+        	loginUser.setUserName(rs.getString(2));
+        	loginUser.setUserCode(rs.getString(3));
+        	loginUser.setSex(rs.getString(4));
+        	loginUser.setLoginAccount(rs.getString(5));
+        	loginUser.setLoginPwd(rs.getString(6));
+        	loginUser.setUserEmail(rs.getString(7));
+        	loginUser.setUserState(rs.getString(8));
+        	loginUser.setUserType(rs.getString(9));
+        	loginUser.setUserTheme(rs.getString(10));
+        	loginUser.setMemo(rs.getString(11));
             return loginUser;
 		}
 	 }
