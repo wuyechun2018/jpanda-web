@@ -3,8 +3,11 @@ package org.jpanda.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.jpanda.model.SysLoginUser;
 import org.jpanda.service.system.SysLoginUserService;
+import org.jpanda.util.Constant;
 import org.jpanda.util.MD5StrGen;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -42,7 +45,7 @@ public class IndexController {
 	 * @return
 	 */
 	@RequestMapping("/login")
-	public String login(String username,String password){
+	public String login(String username,String password,HttpSession session){
 		
 		List<SysLoginUser> userList=sysLoginUserService.findByLoginAccount(username);
 		
@@ -51,6 +54,7 @@ public class IndexController {
 			if(sysLoginUser!=null){
 				password=MD5StrGen.GetMD5Str32(MD5StrGen.GetMD5Str32(password));
 				if(password.equals(sysLoginUser.getLoginPwd())&&!"D".equals(sysLoginUser.getUserState())){
+					session.setAttribute(Constant.CURRENT_USER, sysLoginUser);
 					return "/system/main";
 				}
 				

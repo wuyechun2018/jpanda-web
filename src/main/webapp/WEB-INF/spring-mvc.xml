@@ -21,8 +21,6 @@
 		</mvc:message-converters>
 	</mvc:annotation-driven>
 	
-	
-	
 	<context:component-scan base-package="org.jpanda"/>
 
 	<!-- 将静态文件指定到某个特殊的文件夹中统一处理 -->
@@ -32,4 +30,32 @@
 		<property name="prefix" value="/WEB-INF/views/"/>
 		<property name="suffix" value=".jsp"/>
 	</bean>
+	
+	<!--拦截器,拦截未登录用户，静态资源不予拦截-->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="org.jpanda.common.LoginInterceptor">
+				<property name="excludedUrls">
+					<list>
+						<value>/</value>
+						<value>/index</value>
+						<value>/resources</value>
+						<value>/login</value>
+					</list>
+				</property>
+			</bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
+	<!--拦截器对于未登录用户,抛出自定义Exception,跳转到首页-->
+	<bean id="handlerExceptionResolver"
+    class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+    <property name="exceptionMappings">
+        <props>
+            <prop key="org.jpanda.common.AuthorizationException">redirect:/index</prop>
+        </props>
+    </property>
+   </bean>
+	
 </beans>
