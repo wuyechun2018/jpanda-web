@@ -1,6 +1,9 @@
 package org.jpanda.service.system;
 
+import java.util.List;
+
 import org.jpanda.dao.system.imp.SysLoginUserDaoImp;
+import org.jpanda.model.SysLoginUser;
 import org.jpanda.util.ResultData;
 import org.jpanda.util.Pager;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +37,20 @@ public class SysLoginUserService {
 	  */
 	 public ResultData getUserList(Pager page){
 		 return sysLoginUserDaoImp.list(page);
+	 }
+	 
+	 
+	 /**
+	  * 
+	  * 功能 :根据登录账号查询
+	 
+	  * 开发：wuyechun 2015-6-5
+	 
+	  * @param loginAccount
+	  * @return
+	  */
+	 public List<SysLoginUser> findByLoginAccount(String loginAccount){
+		 return sysLoginUserDaoImp.findByLoginAccount(loginAccount);
 	 }
 	 
 }
