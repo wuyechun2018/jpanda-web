@@ -2,7 +2,7 @@ package org.jpanda.service.system;
 
 import java.util.List;
 
-import org.jpanda.dao.system.imp.SysLoginUserDaoImp;
+import org.jpanda.dao.jdbc.system.imp.SysLoginUserDaoImp;
 import org.jpanda.model.SysLoginUser;
 import org.jpanda.util.ResultData;
 import org.jpanda.util.Pager;

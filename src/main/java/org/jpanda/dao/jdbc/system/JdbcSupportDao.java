@@ -1,4 +1,4 @@
-package org.jpanda.dao.system;
+package org.jpanda.dao.jdbc.system;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;

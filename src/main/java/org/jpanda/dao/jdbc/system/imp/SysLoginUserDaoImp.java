@@ -1,11 +1,11 @@
-package org.jpanda.dao.system.imp;
+package org.jpanda.dao.jdbc.system.imp;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import org.jpanda.dao.system.JdbcSupportDao;
-import org.jpanda.dao.system.SysLoginUserDao;
+import org.jpanda.dao.jdbc.system.JdbcSupportDao;
+import org.jpanda.dao.jdbc.system.SysLoginUserDao;
 import org.jpanda.model.SysLoginUser;
 import org.jpanda.util.OracleSqlHelper;
 import org.jpanda.util.ResultData;

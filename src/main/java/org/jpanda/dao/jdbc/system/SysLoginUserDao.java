@@ -1,4 +1,4 @@
-package org.jpanda.dao.system;
+package org.jpanda.dao.jdbc.system;
 
 import org.jpanda.util.Pager;
 import org.jpanda.util.ResultData;

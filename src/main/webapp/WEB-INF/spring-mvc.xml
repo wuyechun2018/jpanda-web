@@ -38,7 +38,6 @@
 			<bean class="org.jpanda.common.LoginInterceptor">
 				<property name="excludedUrls">
 					<list>
-						<value>/</value>
 						<value>/index</value>
 						<value>/resources</value>
 						<value>/login</value>

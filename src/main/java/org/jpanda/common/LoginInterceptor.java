@@ -25,16 +25,18 @@ public class LoginInterceptor implements HandlerInterceptor {
 			HttpServletResponse response, Object handler) throws Exception {
 		
 		String requestUri = request.getRequestURI();
-		System.out.println(requestUri);
         for (String url : excludedUrls) {
-            if (requestUri.endsWith(url)) {
+            //if (requestUri.endsWith(url)) {
+        	if(requestUri.contains(url)){
                 return true;
             }
+        	System.out.println(requestUri);
         }
 		
 		
 		HttpSession session = request.getSession();
 		if (session.getAttribute(Constant.CURRENT_USER) == null) {
+			System.out.println("AuthorizationException"+requestUri);
 			throw new AuthorizationException();
 			//return true;
 			//response.sendRedirect(request.getContextPath()+ "/index");
