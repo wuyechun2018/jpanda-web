@@ -1,0 +1,112 @@
+/**extjs的css修改**/
+.x-tree-node{
+	font-size:12px;
+}
+
+/*tab字体大小*/
+.x-tab-strip span .x-tab-strip-text{
+	font-size:12px;
+}
+
+/*grid 标题*/
+.x-grid3-hd-row TD{
+	font-size:12px;
+}
+
+/*grid 文字*/
+.x-grid3-row TD{
+	font-size:12px;
+	/*默认13px;*/
+	line-height: 18px;
+}
+
+
+.x-btn BUTTON{
+	font-size:12px;
+}
+
+
+.x-form-unit{
+       height: 22px;
+       line-height: 22px;
+       padding-left: 2px;
+       display: inline-block;
+       display: inline;
+   }
+   
+/**隔行变色**/   
+.x-grid3-row-alt{
+	background-color:rgb(222, 240, 252);
+}
+
+.x-grid3-body .x-grid3-td-numberer{
+	background-image:none;
+}
+
+.x-grid3-row-alt .x-grid3-row-checker{
+	background-color:rgb(222, 240, 252);
+}
+
+.x-grid3-row-alt .x-grid3-row-expander{
+	background-color:rgb(222, 240, 252);
+}
+
+.x-grid3-row-selected{
+	/**background-color:rgb(255, 255, 128) !important;**/
+	background-color:rgb(217, 232, 251) !important;
+}
+
+.x-grid3-row .x-grid3-row-selected {
+	background-color:rgb(255, 255, 128) !important;
+}
+
+.x-grid3-body .x-grid3-row-selected .x-grid3-td-numberer {
+	background-image:none;
+}
+
+.x-toolbar span{
+	font-size:12px;
+}
+
+.x-toolbar label{
+	font-size:12px;
+}
+
+.x-panel-header{
+	font-size:13px;
+}
+
+.x-custom-field-disabled {
+	color: black !important;
+	color: black;
+	background: #F0F8FF;
+}
+
+/***无论ColumnModel 对齐方式align　如何设置，标题都是居中显示***/
+.x-grid3-hd-inner{
+	/*text-align:center;*/
+}
+
+/***表单元素间距***/
+.x-form-item{
+	margin-bottom:5px;
+}
+
+/***自定义弹出框标题字体***/
+.iwin-title{
+	font-size:12px;
+	font-weight: normal;
+}
+
+/***查询框字体大小***/
+.x-small-editor .x-form-field{
+	font-size:12px;
+}
+
+.x-panel-tl .x-panel-header{
+	font-size:13px;
+}
+
+.x-grid3-body .x-grid3-td-numberer .x-grid3-cell-inner {
+	text-align:center;
+}

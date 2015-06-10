@@ -30,13 +30,13 @@ public class LoginInterceptor implements HandlerInterceptor {
         	if(requestUri.contains(url)){
                 return true;
             }
-        	System.out.println(requestUri);
+        	//System.out.println(requestUri);
         }
 		
 		
 		HttpSession session = request.getSession();
 		if (session.getAttribute(Constant.CURRENT_USER) == null) {
-			System.out.println("AuthorizationException"+requestUri);
+			//System.out.println("AuthorizationException"+requestUri);
 			throw new AuthorizationException();
 			//return true;
 			//response.sendRedirect(request.getContextPath()+ "/index");

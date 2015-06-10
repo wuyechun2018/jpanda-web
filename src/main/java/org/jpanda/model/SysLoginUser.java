@@ -3,18 +3,26 @@ package org.jpanda.model;
 /*******************************************************************************
  *  功能说明: 系统登录用户实体类
 
- *  2013-3-8 下午5:35:37 ycwu 创建文件
+ *  2013-3-8 下午5:35:37 wuyechun 创建文件
  * 
  *  修改说明: 创建文件
 
- *  2013-3-8 下午5:35:37 ycwu 修改文件
+ *  2013-3-8 下午5:35:37 wuyechun 修改文件
  * 
  ******************************************************************************/
-
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.TableGenerator;
 
 /**
  * SysLoginUser entity. @author MyEclipse Persistence Tools
  */
+@Entity
+@Table(name = "SYS_LOGIN_USER")
 public class SysLoginUser implements java.io.Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -77,6 +85,10 @@ public class SysLoginUser implements java.io.Serializable {
 	}
 
 	// Property accessors
+	@Id
+	@GeneratedValue(strategy = GenerationType.TABLE,generator="SysLoginUser")
+	@TableGenerator(name="SysLoginUser",table="PK_GENERERATE_SEQ",pkColumnName="gen_key",valueColumnName="gen_value",pkColumnValue="SYS_LOGIN_USER")
+	@Column(name = "USER_ID", unique = true, nullable = false, precision = 10, scale = 0)
 	public Long getUserId() {
 		return this.userId;
 	}
@@ -85,6 +97,7 @@ public class SysLoginUser implements java.io.Serializable {
 		this.userId = userId;
 	}
 
+	@Column(name = "USER_NAME", nullable = false, length = 20)
 	public String getUserName() {
 		return this.userName;
 	}
@@ -93,6 +106,7 @@ public class SysLoginUser implements java.io.Serializable {
 		this.userName = userName;
 	}
 
+	@Column(name = "USER_ALIAS", length = 20)
 	public String getUserAlias() {
 		return this.userAlias;
 	}
@@ -101,6 +115,7 @@ public class SysLoginUser implements java.io.Serializable {
 		this.userAlias = userAlias;
 	}
 
+	@Column(name = "USER_CODE", length = 20)
 	public String getUserCode() {
 		return this.userCode;
 	}
@@ -109,6 +124,7 @@ public class SysLoginUser implements java.io.Serializable {
 		this.userCode = userCode;
 	}
 
+	@Column(name = "SEX", nullable = false, length = 1)
 	public String getSex() {
 		return this.sex;
 	}
@@ -117,6 +133,7 @@ public class SysLoginUser implements java.io.Serializable {
 		this.sex = sex;
 	}
 
+	@Column(name = "LOGIN_ACCOUNT", nullable = false, length = 30)
 	public String getLoginAccount() {
 		return this.loginAccount;
 	}
@@ -125,6 +142,7 @@ public class SysLoginUser implements java.io.Serializable {
 		this.loginAccount = loginAccount;
 	}
 
+	@Column(name = "LOGIN_PWD", nullable = false, length = 40)
 	public String getLoginPwd() {
 		return this.loginPwd;
 	}
@@ -133,6 +151,7 @@ public class SysLoginUser implements java.io.Serializable {
 		this.loginPwd = loginPwd;
 	}
 
+	@Column(name = "USER_EMAIL", nullable = false, length = 30)
 	public String getUserEmail() {
 		return this.userEmail;
 	}
@@ -141,6 +160,7 @@ public class SysLoginUser implements java.io.Serializable {
 		this.userEmail = userEmail;
 	}
 
+	@Column(name = "USER_STATE", nullable = false, length = 1)
 	public String getUserState() {
 		return this.userState;
 	}
@@ -149,6 +169,7 @@ public class SysLoginUser implements java.io.Serializable {
 		this.userState = userState;
 	}
 
+	@Column(name = "USER_TYPE", nullable = true, length = 1)
 	public String getUserType() {
 		return this.userType;
 	}
@@ -157,6 +178,7 @@ public class SysLoginUser implements java.io.Serializable {
 		this.userType = userType;
 	}
 
+	@Column(name = "USER_THEME", nullable = true, length = 50)
 	public String getUserTheme() {
 		return this.userTheme;
 	}
@@ -165,6 +187,7 @@ public class SysLoginUser implements java.io.Serializable {
 		this.userTheme = userTheme;
 	}
 
+	@Column(name = "MEMO", length = 500)
 	public String getMemo() {
 		return this.memo;
 	}
@@ -173,6 +196,7 @@ public class SysLoginUser implements java.io.Serializable {
 		this.memo = memo;
 	}
 
+	@Column(name = "ORDER_BY", nullable = false, precision = 10, scale = 0)
 	public Long getOrderBy() {
 		return this.orderBy;
 	}

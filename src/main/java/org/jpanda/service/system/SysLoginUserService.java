@@ -3,9 +3,10 @@ package org.jpanda.service.system;
 import java.util.List;
 
 import org.jpanda.dao.jdbc.system.imp.SysLoginUserDaoImp;
+import org.jpanda.dao.jpa.system.SysLoginUserJpaDao;
 import org.jpanda.model.SysLoginUser;
-import org.jpanda.util.ResultData;
 import org.jpanda.util.Pager;
+import org.jpanda.util.ResultData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -24,6 +25,8 @@ public class SysLoginUserService {
 	
 	 @Autowired
 	 private SysLoginUserDaoImp sysLoginUserDaoImp;
+	 @Autowired
+	 private SysLoginUserJpaDao sysLoginUserJpaDao;
 	 
 	 
 	 /**
@@ -50,7 +53,13 @@ public class SysLoginUserService {
 	  * @return
 	  */
 	 public List<SysLoginUser> findByLoginAccount(String loginAccount){
-		 return sysLoginUserDaoImp.findByLoginAccount(loginAccount);
+		 
+		 //此处的两种用法都是可以的
+		 //1、采用的是JDBC的方式
+		 //2、采用的Spring Data JPA 的方式
+		 
+		 //return sysLoginUserDaoImp.findByLoginAccount(loginAccount);
+		 return sysLoginUserJpaDao.findByLoginAccount(loginAccount);
 	 }
 	 
 }

@@ -6,4 +6,7 @@
 6.JdbcTemplate Pager Query AND Database dmp file  2015-06-04  V3.1 </br>
 7.Add code  Comments                        2015-06-05  V3.1 </br>
 8.Add Interceptor to protect application.   2015-06-05  V4.0 </br>
-9.Use H2 Database instead of oracle.        2015-06-08  V5.0 </br>
+9.Use H2 Database instead of oracle.        2015-06-10  V5.0 </br>
+10.Add JPA.                                 2015-06-10  V6.0 </br>
+11.Add slf4j And logback.	            2015-06-10  V6.1 </br>
+12.Add Extjs 2.2.1			    2015-06-10  V6.2 </br>

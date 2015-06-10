@@ -1,0 +1,11 @@
+.x-panel-header{
+	/***
+	color:#9e0933;
+	background-image:none;
+	background-color:rgb(251, 251, 250);
+	border-color:#dddddd;
+	***/
+}
+.x-panel-noborder .x-panel-header-noborder{
+	border-color:#dddddd;
+}
