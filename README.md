@@ -17,4 +17,4 @@
 2.The default port is 5678,so we can use http://localhost:5678/jpanda-web to visit it;</br>
 3.When we have login in the system (use username is admin and password is 123,admin/123) ,</br>
 we can use http://localhost:5678/jpanda-web/views/system/ext_main to visit the extjs main page; </br>
-4.We can use http://localhost:5678/jpanda-web/h2 to visit the H2 Server web page; </br>
+4.We can use http://localhost:5678/jpanda-web/h2 to visit the H2 Database web page; </br>
