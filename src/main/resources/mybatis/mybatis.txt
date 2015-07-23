@@ -1,0 +1,35 @@
+ 关于在spring项目中引入Mybatis进行数据访问。
+ 
+ 1、pom.xml中添加相关jar包；
+ 		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		
+ 2、spring-data.xml 中添加如下配置；
+ 
+ <!-- MyBatis配置 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="configLocation" value="classpath:/mybatis/mybatis-config.xml"/>
+		<property name="dataSource" ref="dataSource" />
+		<!-- 自动扫描entity目录, 省掉Configuration.xml里的手工配置 -->
+		<property name="typeAliasesPackage" value="org.jpanda.**.model" />
+		<!-- 显式指定Mapper文件位置 -->
+		<property name="mapperLocations" value="classpath:/mybatis/**/*Mapper.xml" />
+	</bean>
+	<!-- 扫描basePackage下所有以@MyBatisRepository标识的 接口 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="org.jpanda.dao.mybatis" />
+		<property name="annotationClass" value="org.jpanda.common.mybatis.MyBatisRepository"/>
+	</bean>
+	
+	
+3、分页使用插件，关注mybatis-config.xml文件；
+1）<property name="pageSqlId" value=".*ListPage.*" /> 
+ 所有分页方法包含 "ListPage"	

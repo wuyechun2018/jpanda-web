@@ -5,8 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <%@include file="/WEB-INF/views/common/ext.jsp"%>    
-<title>数据监测系统</title>
-<link type="text/css" href="${ctx}/static/styles/mainframe.css" rel="stylesheet" />
+<title>用户管理系统</title>
 <script type="text/javascript" src="${ctx}/resources/ext-2.2.1/plugins/tipwin.js"></script>
 <script type="text/javascript" src="${ctx}/resources/js/extjs/ext_main.js"></script>
 <script type="text/javascript">

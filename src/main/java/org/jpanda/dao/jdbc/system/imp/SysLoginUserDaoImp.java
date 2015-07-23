@@ -6,10 +6,10 @@ import java.util.List;
 
 import org.jpanda.dao.jdbc.system.JdbcSupportDao;
 import org.jpanda.dao.jdbc.system.SysLoginUserDao;
-import org.jpanda.model.SysLoginUser;
+import org.jpanda.model.system.SysLoginUser;
 import org.jpanda.util.OracleSqlHelper;
-import org.jpanda.util.ResultData;
 import org.jpanda.util.Pager;
+import org.jpanda.util.ResultData;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 

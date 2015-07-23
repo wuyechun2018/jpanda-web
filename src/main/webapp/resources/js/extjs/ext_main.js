@@ -216,9 +216,9 @@ function getMenuData(pid){
 	return menuData;
 }
 
-//var menuData=getMenuData(0);
+var menuData=getMenuData(0);
 
-/***
+
 for(var i=0;i<menuData.length;i++){
 	  var menuId=menuData[i].id;
 	  var menuTitle=menuData[i].text;
@@ -254,17 +254,18 @@ for(var i=0;i<menuData.length;i++){
 		}});
 		menuPanel.add(tree);
 }
-***/
+
 //$('span').css('color','red');
 //$('.x-tree-node').css('color','red');
 
+var imgUrl=ctx+"/resources/images/jpanda.png";
 var viewport=new Ext.Viewport({
 			layout : 'border',
 			items : [{
 						region : 'north',
 						//title:'dms',
 						//contentEl:'north',
-					    height:85,
+					    height:68,
 					    autoHeight : true,
 					    border : false,
 					    margins : '0 0 0 0',
@@ -277,22 +278,24 @@ var viewport=new Ext.Viewport({
 							"      <a href=\"#\" class=\"modifyPass\" onclick=\"closeWindow()\">&nbsp;</a>\n" +
 							"    </div>\n" +
 							"  </div>\n" +
-							"  <div class=\"TopLogo\">数据监测系统</div>\n" +
+							"  <div class=\"TopLogo\"></div>\n" +
 							"</div>\n" +
 							"</div>" ***/
-					    html:"<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" id=\"headTable\">\n" +
-				    	 "  <tr>\n" +
-				    	"    <td width=\"454\" height=\"78\" >&nbsp;" +
-				    	"        <div style=\"position:absolute;left:30%;top:0px;\">" +
+					    html:"<table style=\"background-color:RGB(242,247,254);\" width=\"100%\"   border=\"0\" cellspacing=\"0\" cellpadding=\"0\" id=\"headTable\">\n" +
+				    	 "  <tr >\n" +
+				    	"    <td width=\"454\" height=\"68\" >&nbsp;" +
+				    	"        <div style=\"position:absolute;left:20px;top:20px;color:#15428b;font-size:26px;font-family:KaiTi;font-weight:bold;\">" +
+				    	"			<img  style=\"margin-bottom:-6px;\" src=\""+imgUrl+"\">" +
+				    	"			<span style=\"margin-left:-6px;\">用户管理系统</span>" +
 				    	"       </div>\n" +
 				    	"    </td>\n" +
 				    	"    <td align=\"right\" ><table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n" +
 				    	"      <tr>\n" +
 				    	"        <td  align=\"right\" ><table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n" +
 				    	"          <tr>\n" +
-				    	"            <td width=\"70\" height=\"78\" align=\"left\"><a onclick=\"modifyPwd()\" href=\"javascript:void(0)\" >修改密码</a></td>\n" +
-				    	"            <td width=\"70\" height=\"78\" align=\"left\"><a onclick=\"relogin()\" href=\"javascript:void(0)\" >重新登录</a></td>\n" +
-				    	"            <td width=\"90\" align=\"left\"><a onclick=\"doExit()\" href=\"javascript:void(0)\">退出系统</a></td>\n" +
+				    	"            <td width=\"70\" style=\"font-family:KaiTi;font-size:16px\" height=\"78\" align=\"left\"><a onclick=\"modifyPwd()\" href=\"javascript:void(0)\" >修改密码</a></td>\n" +
+				    	"            <td width=\"70\" style=\"font-family:KaiTi;font-size:16px\" height=\"78\" align=\"left\"><a onclick=\"relogin()\" href=\"javascript:void(0)\" >重新登录</a></td>\n" +
+				    	"            <td width=\"90\" style=\"font-family:KaiTi;font-size:16px\" align=\"left\"><a onclick=\"doExit()\" href=\"javascript:void(0)\">退出系统</a></td>\n" +
 				    	"          </tr>\n" +
 				    	"        </table></td>\n" +
 				    	"      </tr>\n" +

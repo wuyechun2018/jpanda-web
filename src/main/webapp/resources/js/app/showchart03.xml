@@ -1,0 +1,95 @@
+<anychart>
+   <settings>
+      <animation enabled="True"/>
+   </settings>
+   <charts>
+      <chart plot_type="CategorizedVertical">
+         <data_plot_settings default_series_type="Bar" enable_3d_mode="true" z_aspect="2">
+            <bar_series point_padding="0.2" group_padding="1">
+               <label_settings enabled="True" rotation="90">
+                  <position anchor="Center" halign="Center" valign="Center"/>
+                  <format>{%Value}{numDecimals:1}</format>
+                  <font bold="False" color="White">
+                     <effects>
+                        <drop_shadow enabled="True" opacity="0.5" distance="2" blur_x="1" blur_y="1"/>
+                     </effects>
+                  </font>
+                  <background enabled="False"/>
+               </label_settings>
+               <tooltip_settings enabled="True">
+                  <format>值: {%YValue}{numDecimals:1} 日期: {%Name}{numDecimals:0}</format>
+                  <background>
+                     <border color="DarkColor(%Color)"/>
+                  </background>
+                  <font color="DarkColor(%Color)" bold="true" size="12"/>
+               </tooltip_settings>
+            </bar_series>
+         </data_plot_settings>
+         <chart_settings>
+            <legend enabled="true" position="Bottom" align="Center" elements_align="elements_align">
+               <font size="12"/>
+               <title enabled="false"/>
+            </legend>
+            <chart_background enabled="false">
+               <inside_margin left="0" top="0" right="0" bottom="0"/>
+            </chart_background>
+            <title enabled="true">
+               <text>月售电量柱状图</text>
+               <font size="15"/>
+               <background enabled="false"/>
+            </title>
+            <axes>
+               <x_axis>
+                  <title enabled="false">
+                     <text>本月日期</text>
+                  </title>
+               </x_axis>
+               <y_axis>
+                  <title enabled="false">
+                     <text>日发电量</text>
+                  </title>
+                  <scale minimum="0"/>
+                  <labels>
+                     <format>{%Value}{numDecimals:1}</format>
+                  </labels>
+               </y_axis>
+            </axes>
+         </chart_settings>
+         <data>
+            <series name="本日电量" color="#F5CC18">
+              <point name="1"  y="32" />
+              <point name="2"  y="3" />
+              <point name="3"  y="342" />
+              <point name="4"  y="432" />
+              <point name="5"  y="" />
+              <point name="6"  y="" />
+              <point name="7"  y="" />
+              <point name="8"  y="" />
+              <point name="9"  y="" />
+              <point name="10"  y="323" />
+              <point name="11"  y="" />
+              <point name="12"  y="" />
+              <point name="13"  y="" />
+              <point name="14"  y="" />
+              <point name="15"  y="" />
+              <point name="16"  y="" />
+              <point name="17"  y="" />
+              <point name="18"  y="" />
+              <point name="19"  y="" />
+              <point name="20"  y="" />
+              <point name="21"  y="" />
+              <point name="22"  y="" />
+              <point name="23"  y="" />
+              <point name="24"  y="" />
+              <point name="25"  y="" />
+              <point name="26"  y="" />
+              <point name="27"  y="" />
+              <point name="28"  y="" />
+              <point name="29"  y="" />
+              <point name="30"  y="" />
+            </series>
+           
+         </data>
+      </chart>
+   </charts>
+</anychart>

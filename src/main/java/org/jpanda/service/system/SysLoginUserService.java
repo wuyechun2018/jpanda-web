@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.jpanda.dao.jdbc.system.imp.SysLoginUserDaoImp;
 import org.jpanda.dao.jpa.system.SysLoginUserJpaDao;
-import org.jpanda.model.SysLoginUser;
+import org.jpanda.model.system.SysLoginUser;
 import org.jpanda.util.Pager;
 import org.jpanda.util.ResultData;
 import org.springframework.beans.factory.annotation.Autowired;

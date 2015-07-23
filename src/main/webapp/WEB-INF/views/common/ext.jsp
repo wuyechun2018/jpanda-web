@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
-<LINK href="${ctx}/resources/images/favicon.ico" type="image/x-icon" rel="icon">                        
-<LINK href="${ctx}/resources/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+<LINK href="${ctx}/resources/images/jpanda.ico" type="image/x-icon" rel="icon">                        
+<LINK href="${ctx}/resources/images/jpanda.ico" type="image/x-icon" rel="shortcut icon">
 <script type="text/javascript" src="${ctx}/resources/jquery/jquery-1.9.1.min.js"></script>
 <link type="text/css" href="${ctx}/resources/styles/base.css" rel="stylesheet" />
 <link type="text/css" href="${ctx}/resources/ext-2.2.1/resources/css/ext-all.css" rel="stylesheet" />

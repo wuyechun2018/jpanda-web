@@ -1,0 +1,58 @@
+<anychart>
+	<settings>
+		<animation enabled="True" />
+	</settings>
+	<charts>
+		<chart plot_type="CategorizedVertical">
+			<data_plot_settings default_series_type="Bar">
+				<bar_series group_padding="0.2">
+					<tooltip_settings enabled="true" color="Blue">
+						<background>
+							<border type="Solid" color="#569AD4" />
+							<fill type="Solid" color="#569AD4" />
+						</background>
+						<format>
+							单位: {%Name}{numDecimals:0} 数值: {%YValue}
+						</format>
+						<font bold="true" size="12" />
+					</tooltip_settings>
+				</bar_series>
+			</data_plot_settings>
+			<chart_settings>
+				<chart_background enabled="true">
+					<!-- 
+						<inside_margin left="0" top="0" right="0" bottom="0"/>
+					-->
+				</chart_background>
+				<title>
+					<text>指标值变化趋势分析图</text>
+				</title>
+				<axes>
+					<x_axis>
+						<labels display_mode="Normal" rotation="45"
+							position="Outside" />
+						<title>
+							<text>日期</text>
+						</title>
+					</x_axis>
+					<y_axis>
+						<title>
+							<text>数值</text>
+						</title>
+					</y_axis>
+				</axes>
+			</chart_settings>
+			<data>
+				<series>
+					<point name="云南水电" color="#aa2116 " y="1395.67" />
+					<point name="北部湾热电" color="#009ad6" y="1851.33" />
+					<point name="广西核电" color="#1d953f" y="160.58" />
+					<point name="广西长洲水电" color="#2a5caa" y="1218.5" />
+					<point name="金紫山风电" color="#f36c21" y="912.25" />
+					<point name="汕头松山热电" color="#ffd400" y="163.83" />
+					<point name="珠海横琴热电" color="#525f42" y="1433.25" />
+				</series>
+			</data>
+		</chart>
+	</charts>
+</anychart>

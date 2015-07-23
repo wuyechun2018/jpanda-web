@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<anychart>
+  <settings>
+    <animation enabled="True" />
+  </settings>
+  <margin left="1" top="0" right="0" bottom="0" />
+  <charts>
+    <chart plot_type="CategorizedBySeriesVertical">
+      <data_plot_settings default_series_type="Bar"
+        enable_3d_mode="true" z_aspect="0.5">
+        <fill color="red"></fill>
+        <bar_series point_padding="0.2" group_padding="1" shape_type="Cylinder">
+          <tooltip_settings enabled="true">
+            <background>
+              <border type="Solid"/>
+              <fill type="Solid"/>
+            </background>
+            <format>{%Name} - {%Value}</format>
+          </tooltip_settings>
+          <label_settings enabled="true">
+            <position anchor="XAxis" />
+            <format>{%Name}</format>
+            <background enabled="false">
+              <border enabled="false" />
+              <fill type="Solid"
+                color="DarkColor(%Color)" />
+              <effects enabled="false" />
+              <inside_margin all="0" />
+            </background>
+            <font color="Black" bold="false" />
+          </label_settings>
+        </bar_series>
+      </data_plot_settings>
+
+<chart_settings>
+        <!--去除蓝色边框-->
+        <chart_background enabled="true">
+          <border enabled="false"></border>
+
+          <inside_margin left="0" top="0" right="0" bottom="0" />
+        </chart_background>
+
+        <title enabled="true">
+          <text></text>
+          <font size="12" />
+        </title>
+
+        <axes>
+          <x_axis>
+            <labels display_mode="Normal"
+              position="Outside" />
+            <title>
+              <text></text>
+              <!-- 可以设置为空,必须得有，否则默认为x_axis -->
+            </title>
+          </x_axis>
+          <y_axis enabled="true">
+            <scale maximum="40311.624902343756" minimum="0"></scale>
+            <title>
+              <text></text>
+              <!-- 可以设置为空,必须得有，否则默认为y_axis -->
+            </title>
+            <labels enabled="true">
+              <format>{%Value}{numDecimals:0}</format>
+            </labels>
+            <major_grid interlaced="true">
+              <line color="#1976C3" opacity="0.5" />
+            </major_grid>
+            <minor_grid interlaced="true">
+              <line color="#1976C3" opacity="0" />
+            </minor_grid>
+          </y_axis >
+          <extra>
+            <y_axis name="extra_y_axis_1" enabled="true">
+              <scale minimum="0"></scale>
+              <title enabled="false" />
+              <labels enabled="true">
+              <format>{%Value}{numDecimals:0}</format>
+              </labels>
+            </y_axis>
+          </extra>
+        </axes>
+      </chart_settings>      <data>
+        <series name="月售电量">
+          <point name="计划" y="17934.09737" color="#00BFFF" />
+          <point name="实际" y="15939.1859" color="#F1774C" />
+          <point name="同期"  y="21404.849"  color="#42D52B" />
+          <point name="去年完成" y="25719.139"  color="#DEDB26" />
+        </series>
+
+
+        <series name="年售电量" y_axis="extra_y_axis_1">
+          <point name="计划"  y="298604.61796"  color="#00BFFF" />
+          <point name="实际"  y="15939.1859"  color="#F1774C" />
+          <point name="同期"  y="21404.849"  color="#42D52B" />
+          <point name="去年完成" y="332126.7289"  color="#DEDB26" />
+        </series>
+      </data>
+    </chart>
+  </charts>
+</anychart>

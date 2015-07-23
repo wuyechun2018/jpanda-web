@@ -15,6 +15,9 @@
                      <span class="icon-bar"></span>
                      <span class="icon-bar"></span>
                     </a>
+                    <%--
+                    <a href="${ctx}/download?fileName=123.doc">下载测试</a>
+                     --%>
                     <a class="brand" href="#">管理界面</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right">
