@@ -10,3 +10,11 @@
 10.Add JPA.                                 2015-06-10  V6.0 </br>
 11.Add slf4j And logback.	            2015-06-10  V6.1 </br>
 12.Add Extjs 2.2.1			    2015-06-10  V6.2 </br>
+
+
+</br>
+1.Use jetty:run to run the web application;</br>
+2.The default port is 5678,so we can use http://localhost:5678/jpanda-web to visit it;</br>
+3.When we have login in the system (use username is admin and password is 123,admin/123) ,</br>
+we can use http://localhost:5678/jpanda-web/views/system/ext_main to visit the extjs main page; </br>
+4.We can use http://localhost:5678/jpanda-web/h2 to visit the H2 Server web page; </br>
